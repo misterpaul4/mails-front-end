@@ -23,7 +23,7 @@ const Header = () => {
 
     <div className='mail-icon-container bg-img'>
       <div className='notification-counter'>
-        <NotifCounter currentUser={user} />
+        <NotifCounter />
       </div>
     </div>
   </header>);

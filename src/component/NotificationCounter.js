@@ -1,11 +1,11 @@
 import React, { useState, useEffect } from "react";
 import preference from "../util/preference";
 
-const NotifCounter = prop => {
+const NotifCounter = () => {
   const [notifications, updateNotifications] = useState(0);
  
   useEffect(() => {
-    fetch(`${preference.HOST}/users/${prop.currentUser}/unread_messages`, {
+    fetch(`${preference.HOST}/users/${preference.currentUser}/unread_messages`, {
       method: "GET",
       mode: "cors",
       headers: {
