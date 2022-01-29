@@ -1,18 +1,13 @@
-import logo from './logo.svg';
 import './css/index.css';
-import mailIcon from './img/mail-icon.png';
+import preference from './util/preference';
+import Header from './component/Header';
 
 function App() {
+
+
   return (
     <div className="homepage bg-img">
-      <header className="App-header flexed-between">
-        <div></div>
-        <div className='mail-icon-container bg-img'>
-          {/* notification counter */}
-          <div id='notification-counter'></div>
-        </div>
-      </header>
-
+      <Header />
       <div className='hero'>
         <div className='hero-bg text-center'>
           <h1>Simple Inbox Application</h1>

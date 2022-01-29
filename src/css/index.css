@@ -10,7 +10,6 @@ body {
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  background-color: red;
 }
 
 code {
@@ -36,7 +35,6 @@ code {
 .homepage {
   background-image: linear-gradient(to bottom, rgba(26,33,64, 0.52), rgba(81,84,115, 0.73)), url('../img/homepage-bg.jpg') !important;
   height: 100vh;
-
   display: flex;
   flex-direction: column;
 }
@@ -47,18 +45,6 @@ code {
   -moz-background-size: cover;
   -o-background-size: cover;
   background-size: cover;
-}
-
-.App-header {
-  padding: 5px 2em;
-  background-color: white;
-}
-
-.mail-icon-container {
-  height: 35px;
-  width: 35px;
-  background-image: url('../img/mail-icon.png');
-  position: relative;
 }
 
 .hero {
