@@ -18,10 +18,18 @@
 .notification-counter {
   position: absolute;
   top: -1px;
-  right: -8px;
+  left: 25px;
   background-color: red;
-  padding: 2px;
+  padding: 5% 10%;
   color: white;
   font-size: smaller;
   border-radius: 50%;
-  }
+}
+
+.greet-user {
+  text-transform: capitalize;
+}
+
+.user {
+  font-weight: bolder;
+}

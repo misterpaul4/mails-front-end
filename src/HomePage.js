@@ -1,9 +1,7 @@
 import './css/index.css';
-import preference from './util/preference';
 import Header from './component/Header';
 
 function App() {
-
 
   return (
     <div className="homepage bg-img">

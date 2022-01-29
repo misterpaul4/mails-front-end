@@ -5,7 +5,7 @@ const dummyUsersInDB = [
 
 const preference = {
   HOST: 'http://localhost:3000',
-  user: dummyUsersInDB[0],
+  currentUser: dummyUsersInDB[1],
 };
 
 export default preference;
