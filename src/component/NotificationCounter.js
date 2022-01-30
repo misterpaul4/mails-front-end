@@ -30,7 +30,13 @@ const NotifCounter = () => {
 
   return(
     <>
-      {notifications}
+      {
+        notifications
+        ?
+        notifications
+        :
+        <span>...</span>
+      }
     </>
   );
 }
