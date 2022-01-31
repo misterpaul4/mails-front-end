@@ -2,7 +2,7 @@ import React, { useState, useEffect } from "react";
 import preference from "../util/preference";
 
 const NotifCounter = () => {
-  const [notifications, updateNotifications] = useState(0);
+  const [notifications, updateNotifications] = useState('.');
  
   useEffect(() => {
     fetch(`${preference.HOST}/users/${preference.currentUser}/unread_messages`, {
@@ -30,13 +30,7 @@ const NotifCounter = () => {
 
   return(
     <>
-      {
-        notifications || (notifications === 0)
-        ?
-        notifications
-        :
-        <span>...</span>
-      }
+      {notifications}
     </>
   );
 }

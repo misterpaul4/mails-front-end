@@ -1,13 +1,14 @@
 import React, { useEffect, useState } from 'react';
+import { Link } from 'react-router-dom';
 import Header from './component/Header';
 import './css/inbox.css';
-// import notesIcon from './img/notes.png';
 import preference from './util/preference';
 import userAvatar from './img/avatar.png';
 import checkIcon from './img/checkIcon.png';
+import dot from './img/dot.png';
 
 const Inbox = () => {
-  const [messages, updateMessages] = useState([])
+  const [messages, updateMessages] = useState([]);
 
   useEffect(() => {
     fetch(`${preference.HOST}/users/${preference.currentUser}/inbox`, {
@@ -34,18 +35,26 @@ const Inbox = () => {
   }, []);
 
   const Attach = m => (
-    <li key={m.id} className='flexed-between'>
-      <div>
-        <h2 className='message-title'>{m.subject}</h2>
-        <span className='receiver'>{m.creator.username}</span> 
+    <Link to={`/users/${preference.currentUser}/messages/${m.id}`} key={m.id}>
+      <li key={m.id} className='flexed-between'>
+      <div className='notTextBg'>
+        <img src={dot} alt='notification dot' className={m.read ? 'notifDot hide' : 'notifDot reveal'} />
+        <div>
+          <h2 className='message-title'>{m.subject}</h2>
+          <span className='receiver'>{m.creator.username}</span> 
+        </div>
       </div>
 
-      <img src={userAvatar} alt='user icon' className='user-icon' />
-    </li>
+        <img src={userAvatar} alt='user icon' className='user-icon' />
+      </li>
+    </Link>
   );
 
   return (
-    <div className='inboxPage'>
+    <>
+    {
+      messages ?
+      <div className='inboxPage'>
       <Header />
       <div className='message-bg'>
         <div className='message-container'>
@@ -56,16 +65,15 @@ const Inbox = () => {
           </div>
 
           <ul className='inbox-list'>
-            {/* messages to self */}
-            {/* <li className='flexed-between'>
-              <h2 className='message-title'>NOTE TO SELF</h2>
-              <img src={notesIcon} className='inboxIcons' alt='notes icon' />
-            </li> */}
             {messages.map(Attach)}
           </ul>
         </div>
       </div>
     </div>
+    :
+    <span>...</span>
+    }
+    </>
   );
 }
 

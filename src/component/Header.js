@@ -7,7 +7,8 @@ import preference from '../util/preference';
 import '../css/header.css';
 
 const Header = () => {
-  return (<header className="App-header flexed-between">
+  return (
+  <header className="App-header flexed-between">
     <Link to='/'>
       <img src={homeIcon} className='home-icon' />
     </Link>
