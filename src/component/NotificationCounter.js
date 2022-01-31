@@ -31,7 +31,7 @@ const NotifCounter = () => {
   return(
     <>
       {
-        notifications
+        notifications || (notifications === 0)
         ?
         notifications
         :
