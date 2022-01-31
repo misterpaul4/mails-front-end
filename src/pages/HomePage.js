@@ -1,9 +1,9 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-import './css/index.css';
-import Header from './component/Header';
-import NotifCounter from './component/NotificationCounter';
-import global from './util/global';
+import '../css/index.css';
+import Header from '../component/Header';
+import NotifCounter from '../component/NotificationCounter';
+import global from '../util/global';
 
 function App() {
 

@@ -1,7 +1,7 @@
 import React, {useEffect, useState} from "react";
 import { useLocation } from 'react-router-dom';
-import Header from "./component/Header";
-import preference from "./util/preference";
+import Header from "../component/Header";
+import preference from "../util/preference";
 
 const Message = () => {
   const [message, updateMessage] = useState();

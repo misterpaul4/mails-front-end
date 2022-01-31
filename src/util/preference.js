@@ -1,12 +1,6 @@
-  // test users are already in the database
-const testUsers = [
-  'paul',
-  'favour'
-];
-
 const preference = {
-  HOST: 'http://localhost:3000',
-  currentUser: testUsers[1],
+  HOST: 'https://calm-beach-19704.herokuapp.com',
+  currentUser: 'paul',
 };
 
 export default preference;

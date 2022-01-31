@@ -1,11 +1,11 @@
 import React, { useEffect, useState } from 'react';
 import { Link } from 'react-router-dom';
-import Header from './component/Header';
-import './css/inbox.css';
-import preference from './util/preference';
-import userAvatar from './img/avatar.png';
-import checkIcon from './img/checkIcon.png';
-import dot from './img/dot.png';
+import Header from '../component/Header';
+import '../css/inbox.css';
+import preference from '../util/preference';
+import userAvatar from '../img/avatar.png';
+import checkIcon from '../img/checkIcon.png';
+import dot from '../img/dot.png';
 
 const Inbox = () => {
   const [messages, updateMessages] = useState([]);

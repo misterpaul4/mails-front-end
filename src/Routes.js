@@ -1,8 +1,8 @@
 import React from 'react';
 import { BrowserRouter, Switch, Route } from 'react-router-dom';
-import HomePage from './HomePage';
-import Inbox from './InboxPage';
-import Message from './MessagePage';
+import HomePage from './pages/HomePage';
+import Inbox from './pages/InboxPage';
+import Message from './pages/MessagePage';
 import './css/index.css';
 
 const Routes = () => (
